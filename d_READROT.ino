@@ -37,10 +37,56 @@ int readRot2(){
       encoderPos2++;
       }
       angle2 = abs((encoderPos2 % encoderStepsPerRevolution) * 360/encoderStepsPerRevolution); //grader, brukes i chooseColor
-      /*Serial.print(encoderPos);
+      /*Serial.print(encoderPos2);
       Serial.print(" ");          for problemsøking
-      Serial.println(angle);*/
+      Serial.println(angle2);*/
    }
       encoder2ALast= encoder2A;
       return angle2;
+}
+
+
+//******readRot3*********
+int readRot3(){
+  boolean encoder3A= digitalRead(encoder3PinA); 
+  if ((encoder3ALast == HIGH) && (encoder3A == LOW))
+  {
+    if (digitalRead(encoder3PinB) == LOW)
+  {
+    encoderPos3--;
+    }
+    else
+    {
+      encoderPos3++;
+      }
+      angle3 = abs((encoderPos3 % encoderStepsPerRevolution) * 360/encoderStepsPerRevolution); //grader, brukes i chooseColor
+      /*Serial.print(encoderPos3);
+      Serial.print(" ");          for problemsøking
+      Serial.println(angle3);*/
+   }
+      encoder3ALast= encoder3A;
+      return angle3;
+}
+
+
+//******readRot4*********
+int readRot4(){
+  boolean encoder4A= digitalRead(encoder4PinA); 
+  if ((encoder4ALast == HIGH) && (encoder4A == LOW))
+  {
+    if (digitalRead(encoder4PinB) == LOW)
+  {
+    encoderPos4--;
+    }
+    else
+    {
+      encoderPos4++;
+      }
+      angle4 = abs((encoderPos4 % encoderStepsPerRevolution) * 360/encoderStepsPerRevolution); //grader, brukes i chooseColor
+      /*Serial.print(encoderPos4);
+      Serial.print(" ");          for problemsøking
+      Serial.println(angle4);*/
+   }
+      encoder4ALast= encoder4A;
+      return angle4;
 }
