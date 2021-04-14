@@ -38,7 +38,7 @@ uint32_t B = ledRing.Color(0,0,255);   //blue
 //**********ShowMyPattern Ledstripe********
 const int setButton = 3;                              //definér pin 3 som setButton
 const int myPatternStripPin = 8;                      //definerer pin 8 for showMyPattern ledstripe
-const int countStrip = 4;                              //showMyPattern ledstripe vil bestå av 4 ledlys -> kan hende dette endres til 8 
+const int countStrip = 4;                              //showMyPattern ledstripe vil bestå av 4 ledlys 
 Adafruit_NeoPixel myPatternStrip = Adafruit_NeoPixel(4, myPatternStripPin, NEO_GRB);
 uint32_t R_showMyP = myPatternStrip.Color(255,0,0);    //red
 uint32_t G_showMyP = myPatternStrip.Color(0,255,0);    //green
